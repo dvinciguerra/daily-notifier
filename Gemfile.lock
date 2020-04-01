@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dotenv (2.7.5)
+    slack-notifier (2.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv
+  slack-notifier
+
+BUNDLED WITH
+   2.1.4
