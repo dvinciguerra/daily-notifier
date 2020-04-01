@@ -12,7 +12,7 @@ DAILY_CHANNEL = ENV['DAILY_CHANNEL']
 SLACK_WEBHOOK_URL = ENV['SLACK_WEBHOOK_URL']
 
 unless DAILY_CHANNEL && SLACK_WEBHOOK_URL
-  raise 'The DAILY_CHANNEL and SLACK_WEBHOOK_URL env vars are undefined'
+  raise ArgumentError, 'The DAILY_CHANNEL or SLACK_WEBHOOK_URL env vars are undefined'
 end
 
 hello = "#{Greetings.good_something} #{Greetings.hi}"
@@ -23,7 +23,12 @@ message = "
 Para entrar na meeting room da daily vocês podem acessar o link #{DAILY_CHANNEL}
 
 Tenham uma ótima daily meeting. =)
+
+@here
 "
+
+puts 'SENDING MESSAGE...'
+puts message
 
 notifier = Slack::Notifier.new(SLACK_WEBHOOK_URL)
 notifier.ping(message)
