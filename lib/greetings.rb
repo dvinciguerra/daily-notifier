@@ -18,8 +18,8 @@ module Greetings
       date_now = DateTime.now
 
       return GOOD[:morning] if (6..11).include? date_now.hour
-      return GOOD[:afternoon] if (12..17).include date_now.hour
-      return GOOD[:night] if (18..23).include date_now.hour
+      return GOOD[:afternoon] if (12..17).include? date_now.hour
+      return GOOD[:night] if (18..23).include? date_now.hour
     end
 
     def hi
