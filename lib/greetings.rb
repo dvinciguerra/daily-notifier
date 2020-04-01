@@ -9,8 +9,12 @@ module Greetings
     night: 'Boa noite'
   }.freeze
 
-  HI = %w[
-    time turma galera
+  HI = [
+    'time',
+    'turma',
+    'galera',
+    'pessoal',
+    'mox quiridux'
   ].freeze
 
   class << self
