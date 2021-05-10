@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     dotenv (2.7.5)
-    slack-notifier (2.3.2)
+    slack-notifier (2.4.0)
 
 PLATFORMS
   ruby
